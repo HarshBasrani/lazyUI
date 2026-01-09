@@ -1,0 +1,59 @@
+{
+  "name": "lazyui-pro",
+  "displayName": "LazyUI Pro",
+  "description": "Constraint-driven UI compiler for Tailwind CSS",
+  "version": "1.0.0",
+  "publisher": "lazyui",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "lazyui.generate",
+        "title": "LazyUI: Generate"
+      }
+    ],
+    "configuration": {
+      "title": "LazyUI",
+      "properties": {
+        "lazyui.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "API key for LLM provider (OpenAI, Anthropic, etc.)"
+        },
+        "lazyui.baseUrl": {
+          "type": "string",
+          "default": "https://api.openai.com/v1/chat/completions",
+          "description": "Base URL for LLM API endpoint"
+        },
+        "lazyui.model": {
+          "type": "string",
+          "default": "gpt-4",
+          "description": "Model to use for code generation"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^18.x",
+    "@types/vscode": "^1.80.0",
+    "@types/babel__parser": "^7.x",
+    "@types/babel__traverse": "^7.x",
+    "typescript": "^5.x"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.23.0",
+    "@babel/traverse": "^7.23.0",
+    "tailwindcss": "^3.4.0"
+  }
+}
