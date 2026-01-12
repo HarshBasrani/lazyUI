@@ -1,5 +1,5 @@
 # LazyUI Pro 🚀
-
+![demo](https://github.com/user-attachments/assets/c6dc4f45-61fd-4cc1-8f2c-26cd2ab94065)
 **The Constraint-Driven AI Compiler for Tailwind CSS.**
 
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://marketplace.visualstudio.com/)
